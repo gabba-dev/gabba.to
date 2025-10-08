@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-colour 0.3s ease, colour 0.3s ease;
+}
+
+/* Theme 1: Sage Green */
+body.theme-sage {
+  --hue: 109;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+/* Theme 2: Soft Pink */
+body.theme-pink {
+  --hue: 321;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+/* Theme 3: Lavender */
+body.theme-lavender {
+  --hue: 220;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+/* Theme 4: Mint */
+body.theme-mint {
+  --hue: 174;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+/* Theme 5: Peach */
+body.theme-peach {
+  --hue: 30;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+/* Theme 6: Sky Blue */
+body.theme-sky {
+  --hue: 204;
+  --bg-colour: hsl(var(--hue), 50%, 80%);
+  --text-colour: hsl(var(--hue), 15%, 30%);
+  --label-colour: hsl(var(--hue), 25%, 50%);
+  --label-text: "refresh for something new";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+body.theme-special {
+  --bg-colour: hsl(180, 75%, 50%);
+  --text-colour: hsl(256, 85%, 50%);
+  --label-colour: hsl(295, 100%, 50%);
+  --label-text: "you found the special 1/100 theme!";
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.item {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-colour);
+  line-height: 0.5;
+  text-decoration: none;
+}
+
+.item:hover {
+  color: var(--text-colour);
+}
+
+.item:visited {
+  color: var(--text-colour);
+}
+
+.item:active {
+  color: var(--text-colour);
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--label-colour);
+  opacity: 0.7;
+  font-style: italic;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label::after {
+  content: var(--label-text);
+}
+
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .item {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
